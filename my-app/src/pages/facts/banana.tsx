@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import { Fact } from "@/components"; // Importação limpa do nosso componente
 
 export default function Banana() {
   return (
@@ -10,12 +11,10 @@ export default function Banana() {
       </Head>
 
       <main className={styles.main}>
-        {/* Header */}
         <header className={styles.header}>
           <h1 className={styles.headerTitle}>Banana</h1>
         </header>
 
-        {/* Conteúdo Central */}
         <div className={`${styles.intro} ${styles.contentWrapper}`}>
           <h1>Projeto Banana</h1>
           <p>
@@ -25,9 +24,20 @@ export default function Banana() {
             Assim como a fruta, este componente foi pensado para ser "descascado" e consumido de forma eficiente, 
             trazendo uma estrutura base sólida e direta ao ponto para o seu front-end.
           </p>
+
+          {/* Adicionando os componentes Fact */}
+          <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '24px' }}>
+            <Fact 
+              title="Rica em Potássio" 
+              text="A banana é uma excelente fonte de energia rápida para desenvolvedores focados em resolver bugs difíceis." 
+            />
+            <Fact 
+              title="Componentização" 
+              text="Assim como uma penca de bananas, componentes React podem ser agrupados para formar uma aplicação inteira." 
+            />
+          </div>
         </div>
 
-        {/* Footer */}
         <footer className={styles.footer}>
           <p className={styles.footerText}>Lelia Salles &copy; 2026</p>
         </footer>
