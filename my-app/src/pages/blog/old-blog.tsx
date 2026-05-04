@@ -1,14 +1,14 @@
-export default function Blog() {
+export default function OldBlog() {
   return (
     <>
     <header>
       <div className="container">
-        <span>My Blog</span>
+        <span>My Old Blog</span>
       </div>
     </header>
     <main>
       <div className="container">
-        <h1>Welcome to the Blog</h1>
+        <h1>Welcome to the Old Blog</h1>
         <p>
           This page is my personal blog with different posts and articles
         </p>
@@ -17,7 +17,7 @@ export default function Blog() {
     <footer>
       <div className="container">
         <p>
-          ©2025 My Blog. All rights reserved
+          © 2025 My Blog. All rights reserved
         </p>
       </div>
     </footer>

@@ -1,15 +1,38 @@
-import styles from './facts.module.css';
+import { FC } from 'react';
+import styles from "./facts.module.css";
 
 interface FactProps {
-  title: string;
-  text: string;
+    title: string;
+    description: string;
 }
 
-export function Fact({ title, text }: FactProps) {
-  return (
-    <div className={styles.card}>
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.text}>{text}</p>
-    </div>
-  );
+export const Fact:FC<FactProps> = ({
+   title, description 
+}) => {
+    return (
+      <>
+        <header>
+          <div className="container">
+            <span>Facts</span>
+          </div>
+        </header>
+        <main>
+          <div className="container">
+            <div className={styles.fact}>
+              <h1>{title}</h1>
+              <p className={styles.description}>{description}</p>
+              <hr className={styles.hr} />
+            </div>
+          </div>
+        </main>
+        <footer>
+        <div className="container">
+          <p>
+            © My Blog. All rights reserved
+          </p>
+        </div>
+      </footer>
+    </>
+  )
 }
+
